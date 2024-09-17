@@ -5,13 +5,27 @@
     font-style: none;
     text-decoration: none;
 }
-
+html{
+    max-height: 1080px;
+}
 body {
     max-width: 1920px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-#main{
-    min-height: 100vh;
+#index-header{
+    width: 100%;
+    height: 60px;
 }
+#index-main{
+    height: 100vh;
+}
+
+#footer{
+    margin-top: auto;
+}
+
 
 
 .card-gris {
@@ -31,7 +45,7 @@ body {
 
 /* Estilo adicional para el logo */
 .navbar-brand img {
-    max-height: 40px; /* Ajusta la altura del logo según sea necesario */
+    max-height: 40px; 
 }
 
 /* Centra el buscador */
@@ -41,16 +55,16 @@ body {
 }
 .form-inline {
     width: 100%;
-    max-width: 600px; /* Ajusta el ancho máximo del formulario de búsqueda */
+    max-width: 600px; 
 }
 
 .footer-logo img {
-    max-height: 50px; /* Ajusta la altura del logo según sea necesario */
+    max-height: 50px; 
 }
 .social-icons a {
-    margin-left: 15px; /* Espaciado entre íconos sociales */
-    color: #343a40; /* Color de los íconos, ajustable según diseño */
+    margin-left: 15px; 
+    color: #343a40; 
 }
 .social-icons a:hover {
-    color: #007bff; /* Color de los íconos al pasar el ratón */
+    color: #007bff; 
 }

@@ -142,3 +142,41 @@ function filtrarProductos() {
     });
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const mainContent = document.getElementById('main-content');
+
+    // Cargar el archivo HTML del formulario dinámicamente
+    fetch('pages/formulario.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al cargar el formulario.');
+            }
+            return response.text();
+        })
+        .then(html => {
+            mainContent.innerHTML = html;
+
+            // Aquí puedes agregar la lógica de tu formulario como validaciones, etc.
+            const form = document.getElementById('usuario-form');
+            const inputUsuario = document.getElementById('username');
+            const mensaje = document.getElementById('mensaje');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevenir que el formulario recargue la página
+
+                const nombreUsuario = inputUsuario.value.trim();
+
+                if (nombreUsuario === "") {
+                    mensaje.innerHTML = `<div class="alert alert-danger">Por favor, ingresa un nombre de usuario.</div>`;
+                } else {
+                    mensaje.innerHTML = `<div class="alert alert-success">¡Hola, ${nombreUsuario}! Bienvenido/a.</div>`;
+                }
+
+                inputUsuario.value = ''; // Limpiar el campo
+            });
+        })
+        .catch(error => {
+            console.error(error);
+        });
+});
+
