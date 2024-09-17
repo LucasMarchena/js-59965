@@ -1,0 +1,49 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Legion Pro 7i Gen 9 Intel (16 pulgadas) con RTX™ 4090",
+            "precio": 1500.00,
+            "categoria": "Electrónica",
+            "imagenes": [
+                "../img/compu-gamer-1.webp"
+            ]
+        },
+        {
+            "id": 2,
+            "nombre": "Iphone 16 Pro Max",
+            "precio": 900.00,
+            "categoria": "Electrónica",
+            "imagenes": [
+                "../img/iphone16.webp"
+            ]
+        },
+        {
+            "id": 3,
+            "nombre": "Auriculares Bluetooth Samsung",
+            "precio": 150.00,
+            "categoria": "Accesorios",
+            "imagenes": [
+                "../img/auriculares-samsung.webp"
+            ]
+        },
+        {
+            "id": 4,
+            "nombre": "Apple Watch 9",
+            "precio": 200.00,
+            "categoria": "Accesorios",
+            "imagenes": [
+                "../img/Apple-Watch.jpg"
+            ]
+        },
+        {
+            "id": 5,
+            "nombre": "Teclado Kumara 556 Redragon",
+            "precio": 80.00,
+            "categoria": "Hardware",
+            "imagenes": [
+                "../img/redragon.webp"
+            ]
+        }
+    ]
+}

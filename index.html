@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--libreria FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <!-- librerias -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>3ra entrega JS</title>
+</head>
+<body>
+
+<div class="container">
+
+        <div class="mb-3">
+            <label for="buscador" class="form-label">Buscar Productos</label>
+            <input type="text" class="form-control" id="buscador" oninput="filtrarProductos()">
+        </div>
+        
+            
+        </div>
+        
+        <!-- Contenedor principal -->
+        <div class="container" id="productos-container">
+            <!--los productos se renderizan aqui-->
+        </div>
+
+        <!-- Botón para abrir el modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#miModal">
+            Abrir carrito
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <!-- Header con estilo destacado -->
+                    <div class="modal-header bg-light">
+                        <h5 class="modal-title" id="exampleModalLabel">Carrito de Compras</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+        
+                    <!-- Cuerpo del modal con tabla -->
+                    <div class="modal-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Precio Unitario</th>
+                                    <th scope="col">Total</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="carrito-body">
+                                <!-- Aquí van las filas con los productos -->
+                            </tbody>
+                        </table>
+                        <!-- Mensaje de carrito vacío -->
+                        <div id="carrito-vacio" class="text-center text-muted d-none">
+                            <p>Tu carrito está vacío.</p>
+                        </div>
+                    </div>
+        
+                    <!-- Footer con total y acciones -->
+                    <div class="modal-footer d-flex justify-content-between">
+                        <div>
+                            <h5>Total: <span id="total-carrito">$0.00</span></h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Seguir Comprando</button>
+                            <button type="button" class="btn btn-success">Realizar compra</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>  
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
