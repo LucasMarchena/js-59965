@@ -3,7 +3,7 @@ let carrito = []; //lista de productos
 
 async function obtenerProductos() {
     try {
-        const respuesta = await fetch("../data/products.json");
+        const respuesta = await fetch("/js-59965/data/products.json");
         if (!respuesta.ok) {
             throw new Error(`Error al obtener los productos: Codigo: ${respuesta.status}`);
         }
