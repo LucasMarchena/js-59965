@@ -3,7 +3,7 @@ let carrito = []; //lista de productos
 
 async function obtenerProductos() {
     try {
-        const respuesta = await fetch("/js-59965/data/products.json");
+        const respuesta = await fetch("../data/products.json");
         if (!respuesta.ok) {
             throw new Error(`Error al obtener los productos: Codigo: ${respuesta.status}`);
         }
@@ -141,42 +141,4 @@ function filtrarProductos() {
         producto.style.display = nombreProducto.includes(filtro) ? 'block' : 'none';
     });
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    const mainContent = document.getElementById('main-content');
-
-    // Cargar el archivo HTML del formulario dinámicamente
-    fetch('pages/formulario.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Error al cargar el formulario.');
-            }
-            return response.text();
-        })
-        .then(html => {
-            mainContent.innerHTML = html;
-
-            // Aquí puedes agregar la lógica de tu formulario como validaciones, etc.
-            const form = document.getElementById('usuario-form');
-            const inputUsuario = document.getElementById('username');
-            const mensaje = document.getElementById('mensaje');
-
-            form.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevenir que el formulario recargue la página
-
-                const nombreUsuario = inputUsuario.value.trim();
-
-                if (nombreUsuario === "") {
-                    mensaje.innerHTML = `<div class="alert alert-danger">Por favor, ingresa un nombre de usuario.</div>`;
-                } else {
-                    mensaje.innerHTML = `<div class="alert alert-success">¡Hola, ${nombreUsuario}! Bienvenido/a.</div>`;
-                }
-
-                inputUsuario.value = ''; // Limpiar el campo
-            });
-        })
-        .catch(error => {
-            console.error(error);
-        });
-});
 
