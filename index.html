@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--libreria FONT AWESOME-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -13,99 +16,106 @@
     <!--Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
 
     <!-- librerias -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>3ra entrega JS</title>
+    <title>UrbanSneakers AR</title>
 </head>
+
 <body>
     <header id="index-header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
-                <img src="img/logo.png" alt="Logo">
+                <img src="img/logo.png" alt="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
-                    <!-- Puedes añadir más enlaces de navegación aquí si lo deseas -->
+                    <!-- se pueden agregar más enlaces de navegación aca si se desea -->
                 </ul>
                 <div class="navbar-form">
                     <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar" >
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="buscador" oninput="filtrarProductos()">Buscar</button>
+                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="buscador"
+                            oninput="filtrarProductos()">Buscar</button>
                     </form>
                 </div>
                 <button class="btn btn-outline-primary ml-3" type="button" data-toggle="modal" data-target="#miModal">
-                    <i class="fas fa-shopping-cart"></i> Carrito
+                    <i class="fas fa-shopping-cart"></i>
                 </button>
             </div>
         </nav>
     </header>
 
     <main id="index-main">
-            <div class="container">
-                
-            </div>
-            
-            <!-- Contenedor principal -->
-            <div class="container" id="productos-container">
-                <!--los productos se renderizan aqui-->
-            </div>
+        <div class="container">
 
-            <!-- Modal -->
-            <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <!-- Header con estilo destacado -->
-                        <div class="modal-header bg-light">
-                            <h5 class="modal-title" id="exampleModalLabel">Carrito de Compras</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+        </div>
+
+        <!-- Contenedor principal -->
+        <div class="container my-4 mt-5" id="productos-container">
+            <!--los productos se renderizan aqui-->
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <!-- Header con estilo destacado -->
+                    <div class="modal-header bg-light">
+                        <h5 class="modal-title" id="exampleModalLabel">Carrito de Compras</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <!-- Cuerpo del modal con tabla -->
+                    <div class="modal-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Precio Unitario</th>
+                                    <th scope="col">Total</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="carrito-body">
+                                <!-- Aquí van las filas con los productos -->
+                            </tbody>
+                        </table>
+                        <!-- Mensaje de carrito vacío -->
+                        <div id="carrito-vacio" class="text-center text-muted d-none">
+                            <p>Tu carrito está vacío.</p>
                         </div>
-            
-                        <!-- Cuerpo del modal con tabla -->
-                        <div class="modal-body">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Producto</th>
-                                        <th scope="col">Cantidad</th>
-                                        <th scope="col">Precio Unitario</th>
-                                        <th scope="col">Total</th>
-                                        <th scope="col"></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="carrito-body">
-                                    <!-- Aquí van las filas con los productos -->
-                                </tbody>
-                            </table>
-                            <!-- Mensaje de carrito vacío -->
-                            <div id="carrito-vacio" class="text-center text-muted d-none">
-                                <p>Tu carrito está vacío.</p>
-                            </div>
+                    </div>
+
+                    <!-- Footer con total y acciones -->
+                    <div class="modal-footer d-flex justify-content-between">
+                        <div>
+                            <h5>Total: <span id="total-carrito">$0.00</span></h5>
                         </div>
-            
-                        <!-- Footer con total y acciones -->
-                        <div class="modal-footer d-flex justify-content-between">
-                            <div>
-                                <h5>Total: <span id="total-carrito">$0.00</span></h5>
-                            </div>
-                            <div>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Seguir Comprando</button>
-                                <button type="button" class="btn btn-success">Realizar compra</button>
-                            </div>
+                        <div>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Seguir
+                                Comprando</button>
+                            <button type="button" class="btn btn-success">Realizar compra</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
-    </main> 
+        </div>
+        </div>
+    </main>
     <footer id="index-footer" class="bg-light text-dark py-4">
         <div class="container">
             <div class="row align-items-center">
@@ -117,10 +127,13 @@
                 </div>
                 <!-- Redes Sociales -->
                 <div class="col-md-6 text-md-right social-icons">
-                    <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://facebook.com" target="_blank" title="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
                     <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com" target="_blank" title="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
@@ -133,4 +146,5 @@
     <script src="scripts/app.js"></script>
 
 </body>
+
 </html>

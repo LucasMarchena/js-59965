@@ -1,66 +1,59 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-style: none;
-    text-decoration: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-style: none;
+  text-decoration: none;
 }
 
 body {
-    max-width: 1920px;
-    display: flex;
-    flex-direction: column;
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
 }
-#index-header{
-    width: 100%;
+#index-header {
+  width: 100%;
 }
-#index-main{
-    min-height: 100vh;
-}
-
-#footer{
-    margin-top: auto;
+#index-main {
+  min-height: 100vh;
 }
 
-
+#footer {
+  margin-top: auto;
+}
 
 .card-gris {
-    background-color: #f8f9fa; 
-    border: 1px solid #dee2e6; 
-    border-radius: 0.25rem; 
-    margin: 5px 0;
-}
-
-.card-gris .card-body {
-    color: #343a40; 
-}
-
-.card-gris .card-title {
-    color: #495057; 
+  background-color: #f8f9fa;
+  border-radius: 0.25rem;
+  margin: 5px 0;
 }
 
 /* Estilo adicional para el logo */
 .navbar-brand img {
-    max-height: 40px; 
+  max-height: 80px;
 }
 
 /* Centra el buscador */
-.navbar-nav .mb-3{
-    flex: 1;
-    justify-content: center;
+.navbar-nav .mb-3 {
+  flex: 1;
+  justify-content: center;
 }
 .form-inline {
-    width: 100%;
-    max-width: 600px; 
+  width: 100%;
+  max-width: 600px;
 }
 
 .footer-logo img {
-    max-height: 50px; 
+  max-height: 50px;
 }
 .social-icons a {
-    margin-left: 15px; 
-    color: #343a40; 
+  margin-left: 15px;
+  color: #343a40;
 }
 .social-icons a:hover {
-    color: #007bff; 
+  color: #007bff;
+}
+
+.card {
+  padding: 10px; /* Reducir el padding interno de la tarjeta */
 }

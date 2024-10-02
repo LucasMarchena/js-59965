@@ -1,49 +1,88 @@
 {
-    "productos": [
-        {
-            "id": 1,
-            "nombre": "Legion Pro 7i Gen 9 Intel (16 pulgadas) con RTX™ 4090",
-            "precio": 1500.00,
-            "categoria": "Electrónica",
-            "imagenes": [
-                "../img/compu-gamer-1.webp"
-            ]
-        },
-        {
-            "id": 2,
-            "nombre": "Iphone 16 Pro Max",
-            "precio": 900.00,
-            "categoria": "Electrónica",
-            "imagenes": [
-                "../img/iphone16.webp"
-            ]
-        },
-        {
-            "id": 3,
-            "nombre": "Auriculares Bluetooth Samsung",
-            "precio": 150.00,
-            "categoria": "Accesorios",
-            "imagenes": [
-                "../img/auriculares-samsung.webp"
-            ]
-        },
-        {
-            "id": 4,
-            "nombre": "Apple Watch 9",
-            "precio": 200.00,
-            "categoria": "Accesorios",
-            "imagenes": [
-                "../img/Apple-Watch.jpg"
-            ]
-        },
-        {
-            "id": 5,
-            "nombre": "Teclado Kumara 556 Redragon",
-            "precio": 80.00,
-            "categoria": "Hardware",
-            "imagenes": [
-                "../img/redragon.webp"
-            ]
-        }
-    ]
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Nike Dunk Low Retro Premium",
+      "precio": 209.9,
+      "categoria": "Urbano",
+      "imagen": "https://nikearprod.vtexassets.com/arquivos/ids/773553/DZ2536_600_A_PREM.jpg?v=638333345015300000"
+    },
+    {
+      "id": 2,
+      "nombre": "Nike Air Force 1 x Supreme",
+      "precio": 239.9,
+      "categoria": "Urbano",
+      "imagen": "https://acdn.mitiendanube.com/stores/001/666/292/products/s11-9f0b3236379c25728916896172678450-640-0.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Nike Dunk High Retro",
+      "precio": 229.9,
+      "categoria": "Urbano",
+      "imagen": "https://nikearprod.vtexassets.com/arquivos/ids/730596/DD1399_105_A_PREM.jpg?v=638308269292370000"
+    },
+    {
+      "id": 4,
+      "nombre": "Puma Suede Classic",
+      "precio": 119.9,
+      "categoria": "Urbano",
+      "imagen": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS-aE7JqE5cHI0_11RIr9KKyIHK7p4CIwyUQMxc2-PCZqGxvnInRrTlP-NanjHDvDVp-L8MQukLeS3ylSSfkUWPNP1ngjbQyO5Vhhdhj1eE&usqp=CAE"
+    },
+    {
+      "id": 5,
+      "nombre": "Puma Slipstream Mid",
+      "precio": 119.99,
+      "categoria": "Urbano",
+      "imagen": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_706,h_706/global/388992/01/sv01/fnd/ARG/fmt/png"
+    },
+    {
+      "id": 6,
+      "nombre": "Puma Caven",
+      "precio": 99.99,
+      "categoria": "Urbano",
+      "imagen": "https://xtremepeoplestore.com/cdn/shop/files/18_66efd3c4-09e9-4247-883c-99d46e71b07b_800x.png?v=1689874049"
+    },
+    {
+      "id": 7,
+      "nombre": "Vans Old Skool",
+      "precio": 79.99,
+      "categoria": "Urbano",
+      "imagen": "https://static.ftshp.digital/img/p/1/1/2/6/7/6/5/1126765-full_product.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "Vans Sk8-Hi",
+      "precio": 84.99,
+      "categoria": "Urbano",
+      "imagen": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTyykfH3sB8j93Iv9OxDxSHVpJijA0dt7e0iW50hLhlT4eASqSGSDrR2Z6N5KZfZK3GXSZhJxxJijjhMcyBrWuX-90tWMiKRYsSUeZfq6xvv3rW3--UdAvy&usqp=CAE"
+    },
+    {
+      "id": 9,
+      "nombre": "Vans Authentic",
+      "precio": 74.99,
+      "categoria": "Urbano",
+      "imagen": "https://authogar.vtexassets.com/arquivos/ids/175941/vans_u_authentic_vn0a5krd4w6_2_.jpg?v=637980046473270000"
+    },
+    {
+      "id": 10,
+      "nombre": "Nike Blazer Mid '77",
+      "precio": 114.99,
+      "categoria": "Urbano",
+      "imagen": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTGWJMoNRAPsPTRxRepI5ftqYEp21jnB2-m2jfVOKLHviADW8rK2NmOC42YWe97f_blCAwYwMoircKMyPzpIJNURa3Zpd2HJcJfbp8TLlN-IND2f4v2gAkCag&usqp=CAE"
+    },
+    {
+      "id": 11,
+      "nombre": "Puma Mirage Sport",
+      "precio": 104.99,
+      "categoria": "Urbano",
+      "imagen": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ2ixYqJSRq2Tmtf50VA8yPTl6rpeudd51nrs-lyHXd8yNrlHPIjIHLsNlz7KILNodL0DZtZxgZNm21bZFIaEscuIHyWFyJOAXE0kBsnIJxdnaWDIGfkdm8Hw&usqp=CAE"
+    },
+    {
+      "id": 12,
+      "nombre": "Vans Era",
+      "precio": 69.99,
+      "categoria": "Urbano",
+      "imagen": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQNqYNllRT4fXZxwnYiTYDvl5m0S2kIUash4NxulhYV6ECOM9Gb4KlGi-GCvLyvNjMIqspHjJTD3oOk1UD5vgH4d08hbRonTu4SWH3Iej_0XhMnM_C0Gz7Y&usqp=CAE"
+    }
+  ]
 }
